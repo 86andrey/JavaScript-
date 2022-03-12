@@ -13,11 +13,11 @@
 // *- В конце вывести сообщение "Операция завершена"
 // *
 // let balance = 1000;
-// const payment = 1100;
-// console.log(`Общая стоимость заказа ${payment} кредитов. Проверяем кол-во доступных средств на счету.`)
+// const payment = 1500;
+// console.log(`Общая стоимость заказа ${balance} кредитов. Проверяем кол-во доступных средств на счету.`)
 // if(payment < balance) {
-//     const surplus = balance - payment;
-//     console.log(`На счету осталось ${surplus} кредитов`); 
+//     balance -= payment;
+//     console.log(`На счету осталось ${balance} кредитов`); 
 // } else {
 //     console.log(`На счету недостаточно средств для проведения операции!`);
 // }
@@ -36,15 +36,19 @@
 // * - В результате вывести сообщение
 // * "Оформляем заказ на сумму [сумма] со скидкой [скидка]%"
 // *
-// const totalSpent = 50000;
-// let payment = 500;
-// let discount = 0
+// const totalSpent = 11100;
+// let payment = 3500;
+// let discount = 0;
 // if(totalSpent > 100 && totalSpent <= 1000) {
-//     console.log(`Оформляем заказ на сумму ${payment} со скидкой 2%`);
+//     console.log(`бронзовый партнёр, скидка 2%`);
+//     discount = 0.02;
 // } else if(totalSpent > 1000 && totalSpent <= 5000) {
-//     console.log(`Оформляем заказ на сумму ${payment} со скидкой 5%`);
+//     console.log(`серебряный партнёр, скидка 5%`);
+//     discount = 0.05;
 // } else if(totalSpent > 5000) {
-//     console.log(`Оформляем заказ на сумму ${payment} со скидкой 10%`);
+//     console.log(`золотой партнёр, скидка 10%`);
+//     discount = 0.1;
 // } else {
-//     console.log(`Оформляем заказ на сумму ${payment} со скидкой 0%`);
+//     console.log(`не партнёр, со скидкой 0%`);
 // }
+// console.log(`Оформляем заказ на сумму ${payment} со скидкой ${discount * 100}%`);
