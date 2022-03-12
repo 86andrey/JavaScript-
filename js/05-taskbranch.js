@@ -36,7 +36,7 @@
 // * - В результате вывести сообщение
 // * "Оформляем заказ на сумму [сумма] со скидкой [скидка]%"
 // *
-// const totalSpent = 11100;
+// let totalSpent = 11100;
 // let payment = 1000;
 // let discount = 0;
 // if(totalSpent > 100 && totalSpent <= 1000) {
@@ -51,5 +51,7 @@
 // } else {
 //     console.log(`не партнёр, со скидкой 0%`);
 // }
-// payment = payment - payment * discount;
+// payment -= payment * discount;
 // console.log(`Оформляем заказ на сумму ${payment} со скидкой ${discount * 100}%`);
+// totalSpent += payment;
+// console.log(`Общая сумма потраченого : ${totalSpent}`);
