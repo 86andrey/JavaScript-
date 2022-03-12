@@ -37,7 +37,7 @@
 // * "Оформляем заказ на сумму [сумма] со скидкой [скидка]%"
 // *
 // const totalSpent = 11100;
-// let payment = 3500;
+// let payment = 1000;
 // let discount = 0;
 // if(totalSpent > 100 && totalSpent <= 1000) {
 //     console.log(`бронзовый партнёр, скидка 2%`);
@@ -51,4 +51,5 @@
 // } else {
 //     console.log(`не партнёр, со скидкой 0%`);
 // }
+// payment = payment - payment * discount;
 // console.log(`Оформляем заказ на сумму ${payment} со скидкой ${discount * 100}%`);
