@@ -33,8 +33,8 @@
 // - если логина нет, вывести сообщение "Пользователь [логин] не найден".
 // -  если логина есть, вывести сообщение "Пользователь [логин] найден".
 // - сначало через for, потом через for...of, логика break, метод includes() с тернарным оператором
-const logins = ['wfgwr4', '5689jj', 'yk8y21', 'wpk4lo'];
-const loginToFind = 'yk8y21';
+// const logins = ['wfgwr4', '5689jj', 'yk8y21', 'wpk4lo'];
+// const loginToFind = 'yk8y21';
 // let message = '';
 // for (let i = 0; i < logins.length; i += 1) {
 //     const login = logins[i];
