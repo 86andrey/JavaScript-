@@ -53,3 +53,9 @@
 // - вариант с тернарным оператором самый лучший !!!
 // const message = logins.includes(loginToFind) ? `Пользователь ${loginToFind} найден` : `Пользователь ${loginToFind} не найден`;
 // console.log(message);
+
+// ___________________________________________________
+// * Напиши скрипт поиска логина
+// const numbers = [1,2,3,4,5,6];
+// numbers.unshift(6);
+// console.table(numbers);
