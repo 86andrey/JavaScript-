@@ -109,3 +109,50 @@
 //     inver += lit === lit.toLowerCase() ? lit.toUpperCase() : lit.toLowerCase();
 // }
 // console.log(inver);
+
+// ___________________________________________________
+// * Делаем slug в URL из названия статьи (например на dev.to)
+// * Заголовок статьи состоит только из букв и пробелов
+// -нормализуем строку
+// -разбиваем по словам
+// -сшиваем в строку с разделителем
+// должно получиться top-10-benefist-of-react-framework
+// const title = 'Top 10 benefist of react framework';
+// const slug = title.toLowerCase().split(" ").join("-");
+// console.log(slug);
+
+// ___________________________________________________
+// Напиши скрипт который считает сумму элементов двух массивов.
+// const array1 = [5,10,15,20];
+// const array2 = [10,20,30];
+// const all = array1.concat(array2);
+// let allNumber = 0;
+// for (const num of all) {
+//     allNumber += num;
+// }
+// console.log(allNumber);
+
+// ___________________________________________________
+// работаем с коллекцией карточек в trello
+// - метод splice();
+// - удалить, добавить, обновить
+const cards = ['Карточка-1','Карточка-2','Карточка-3','Карточка-4','Карточка-5'];
+
+// _______________ * удаление (по индексу), метод indexOf()__________________________
+//
+// const cardToRemove =  'Карточка-3';
+// const index = cards.indexOf(cardToRemove);
+// cards.splice(index,1);
+// console.log(cards);
+
+// ______________* добавление (по индексу)_________________________________________
+// const cardToInsert =  'Карточка-6';
+// const index = 3;
+// cards.splice(index,0,cardToInsert);
+// console.log(cards);
+
+// ______________* обнавление (по индексу)_________________________________________
+// const cardToUpdate = 'Карточка-4';
+// const index = 2;
+// cards.splice(index,1,cardToUpdate);
+// console.log(cards);
