@@ -26,3 +26,41 @@
 // return min;
 // }
 // console.log(findSmallestNumber([51, 18, 13, 24, -7, 2, 19]));
+
+// function calculateTotalPrice(order) {
+//     let total = 0;
+//   for (const val of order) {
+//     total += val;
+//   }
+//     return total;
+//   }
+//   calculateTotalPrice([12, 85, 37, 4]);
+//   calculateTotalPrice([164, 48, 291]);
+//   calculateTotalPrice([412, 371, 94, 63, 176]);
+//   calculateTotalPrice()
+  // console.log(calculateTotalPrice([12, 85, 37, 4]));
+ 
+  // function createArrayOfNumbers(min, max) {
+  //   const numbers = [];
+    // Change code below this line
+  // for (let i = min; i <= max; i += 1) {
+  //     numbers.push(i);
+   
+  // }
+    // Change code above this line
+  //  return numbers;
+  // }
+  // console.log(createArrayOfNumbers(1, 3));
+
+//   function filterArray(numbers, value) {
+//     let num = [];
+//    // Change code below this line
+//  for (let i of numbers) {
+//    if (i > value) {
+//      num.push(i);
+//    }
+//  }
+//    // Change code above this line
+//   return num;
+//  }
+//  console.log(filterArray([12, 24, 8, 41, 76], 20));

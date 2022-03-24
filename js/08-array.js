@@ -34,17 +34,17 @@
 // -  если логина есть, вывести сообщение "Пользователь [логин] найден".
 // - сначало через for, потом через for...of, логика break, метод includes() с тернарным оператором
 // const logins = ['wfgwr4', '5689jj', 'yk8y21', 'wpk4lo'];
-// const loginToFind = 'yk8y21';
+// let loginToFind = '5689jj';
 // let message = '';
 // for (let i = 0; i < logins.length; i += 1) {
 //     const login = logins[i];
-//     if (login === loginToFind) {
-//         message = `Пользователь ${loginToFind} найден`;
-//         break; - полностью прерывает цикл !
-//     } 
-//         message = `Пользователь ${loginToFind} не найден`;
-//     } 
-//     console.log(message);
+    // if (login === loginToFind) {
+    //     message = `Пользователь ${loginToFind} найден`;
+    //     break;
+    // } 
+    //     message = `Пользователь ${loginToFind} не найден`;
+    // } 
+    // console.log(message);
 // ________________________________
 // - вариант с помощью includes()
 // console.log(logins.includes('yk8y21'));
