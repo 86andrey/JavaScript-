@@ -64,17 +64,41 @@
 //   return num;
 //  }
 //  console.log(filterArray([12, 24, 8, 41, 76], 20));
+// ___________________________________________________
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   rating: 8.38,
+// };
 
-const book = {
-  title: "The Last Kingdom",
-  author: "Bernard Cornwell",
-  genres: ["historical prose", "adventure"],
-  rating: 8.38,
-};
-
-for (const key in book) {
+// for (const key in book) {
   // Ключ
   // console.log(key);
   // Значение свойства с таким ключом
-  console.log(book[key]);
- }
+//   console.log(book[key]);
+//  }
+// ___________________________________________________
+//  const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "На берегу спокойных вод",
+//     author: "Роберт Шекли",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "Сон смешного человека",
+//     author: "Федор Достоевский",
+//     rating: 7.75,
+//   },
+// ];
+//  for (const  book of books) {
+  //  console.log(book);
+  //  console.log(book.title);
+  //  console.log(book.author);
+  //  console.log(book.rating);
+//  }
