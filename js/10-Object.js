@@ -79,22 +79,34 @@
 //   console.log(countProps(object));
 
 
-const products = [
-  { name: "Radar", price: 1300, quantity: 4 },
-  { name: "Scanner", price: 2700, quantity: 3 },
-  { name: "Droid", price: 400, quantity: 7 },
-  { name: "Grip", price: 1200, quantity: 9 },
-];
 
-function getProductPrice(tron) {
-  const all = [];
-  for (const key of products) {
-    if (1 === 1){
-      all.push(key[tron]);
-    }
-  }; return all;
-}
-console.log(getProductPrice("name"));
+// __________________________________________________________
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// // function getProductPrice(tron) { 
+//   // const total = []; 
+// const keys = Object.keys(products);
+// for (const key of keys) {
+//   // Ключ
+//   console.log(key);
+//   // Значение свойства
+//   console.log(products[key]);
+//   if(keys.includes["name"]) {
+//     console.log(4444);
+//   }
+// }console.log(`нет такого`);
+// __________________________________________________________
+
+
+
+
+// console.log(getProductPrice("name"));
 // console.log(products);
 
 // const products = [
@@ -113,3 +125,22 @@ console.log(getProductPrice("name"));
 // }; return 2;
 // }
 // console.log(getAllPropValues("Radar"));
+
+
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+function getProductPrice(tron) { 
+  const total = [];
+const values = Object.values(products);                   
+for (const value of values) {              
+  if(values.includes[tron]) {
+    total.push(value[tron]);
+  };
+} return total;
+}; 
+console.log(getProductPrice("name"));
