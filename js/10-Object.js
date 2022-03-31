@@ -127,20 +127,70 @@
 // console.log(getAllPropValues("Radar"));
 
 
-const products = [
-  { name: "Radar", price: 1300, quantity: 4 },
-  { name: "Scanner", price: 2700, quantity: 3 },
-  { name: "Droid", price: 400, quantity: 7 },
-  { name: "Grip", price: 1200, quantity: 9 },
-];
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   // { name: "Droid", price: 400, quantity: 7 },
+//   // { name: "Grip", price: 1200, quantity: 9 },
+// ];
 
-function getProductPrice(tron) { 
-  const total = [];
-const values = Object.values(products);                   
-for (const value of values) {              
-  if(values.includes[tron]) {
-    total.push(value[tron]);
-  };
-} return total;
-}; 
-console.log(getProductPrice("name"));
+// function getAllPropValues(propName) { 
+//   const total = [];
+//   for (const product of products) {
+//                     console.log(product);
+//   const keys = Object.keys(product); 
+//                     console.log(keys);
+//     if (keys.includes(propName)) {
+//       total.push(product[propName])
+//   };
+//   }; return total;
+//   }
+// console.log(getAllPropValues("name"));
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Пиши код ниже этой строки
+// for (const product of products) {
+//                         console.log(product);
+//   const findName = Object.values(product);
+//                   console.log(findName);
+//   if (findName.includes((productName))){
+//              return product.price * product.quantity;
+//   };
+// };
+// return 0;
+
+//   // Пиши код выше этой строки
+// };
+// console.log(calculateTotalPrice("Droid"));
+
+// const playlist = {
+//       ret: 'мой супер плейлист',
+//       rating: 2,
+//       tracks: ['Track-1','Track-2','Track-3'],
+//       trackCount: 4,
+//       getName: function () {
+//   console.log('you are president?');
+//       },
+//       addTrack(track) {
+//           this.tracks.push(track);
+//       },
+  
+//   };
+//   const {ret, rating, tracks} = playlist;
+
+//   console.log(ret);
+function add(...args) {
+  let total = 0;
+  for (const tet of args) {
+    total += tet;
+  };return total;
+  
+}
+console.log(add(15, 27));
