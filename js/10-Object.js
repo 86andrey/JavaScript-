@@ -186,11 +186,43 @@
 //   const {ret, rating, tracks} = playlist;
 
 //   console.log(ret);
-function add(...args) {
-  let total = 0;
-  for (const tet of args) {
-    total += tet;
-  };return total;
+
+// function add(a, ...args) {
+//   // console.log(a,args);
+//   let total = [];
+//   for(let i = 0; i < args.length; i +=1) {
+//     console.log(a[i]); 
+//     console.log(args[i]); 
   
-}
-console.log(add(15, 27));
+//    if (a.includes(args[i])) {
+//     total.push(args[i]);
+//    };
+//   } return total;
+//   };
+  
+  
+// console.log(add([1, 2, 3, 4, 5], 1, 8, 2, 7));
+
+// function findMatches(a,s,d) {
+//   console.log(findMatches);
+//   // const matches = [];
+//   // return matches;
+// }
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+const atTheOldToad = {
+  items: [
+    { name: "Speed", price: 460 },
+    { name: "Dragon", price: 780 },
+    { name: "Stone", price: 520 },
+  ],
+updatePotionName(oldName, newName) {
+const {items} = this;
+  for (let i = 0; i < items.length; i += 1) {
+    const {name} = items[i];
+    if (oldName === name) {
+        return `Potion ${oldName} is not in inventory!`;
+    } items.splice(i, 1);
+  }
+},
+};
+console.log(atTheOldToad.updatePotionName("Stone", "Invulnerability potion"));
