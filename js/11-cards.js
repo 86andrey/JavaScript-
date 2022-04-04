@@ -1,3 +1,5 @@
-let a = 1;
-console.log(a);
-let b =2;
+// task 1
+let arr = ['Ваня','Иштван','Оля',];
+console.log(arr);
+arr[1] = 'Петя';
+console.log(arr);

@@ -211,21 +211,21 @@
 // console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
 
 
-const atTheOldToad = {
-  potions: [
-    { name: "Speed potion", price: 460 },
-    { name: "Dragon breath", price: 780 },
-    { name: "Stone skin", price: 520 },
-  ],
-  addPotion(newPotion) {
-    for (const potion of this.potions){
-      console.log(potion);
-    if (potion === { name: "Dragon breath", price: 700 }) {
-      return `Error! Potion ${newPotion} is already in your inventory!`;
-    } this.potions.push(newPotion);
-    return this;
-  }
-  },
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   addPotion(newPotion) {
+//     for (const potion of this.potions){
+//       console.log(potion);
+//     if (potion === { name: "Dragon breath", price: 700 }) {
+//       return `Error! Potion ${newPotion} is already in your inventory!`;
+//     } this.potions.push(newPotion);
+//     return this;
+//   }
+//   },
   // addPotion(newPotion) {
   //   const potionsNames = [];
   //   for (const potion of this.potions) {
@@ -236,7 +236,7 @@ const atTheOldToad = {
   //     return `Error! Potion ${newPotion.name} is already in your inventory!`;
   //   } else {this.potions.push(newPotion)};
   // },
-};
+// };
 
-console.log(atTheOldToad.addPotion({ name: "asfaf breath", price: 700 }));
-console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 240 }));
+// console.log(atTheOldToad.addPotion({ name: "asfaf breath", price: 700 }));
+// console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 240 }));
