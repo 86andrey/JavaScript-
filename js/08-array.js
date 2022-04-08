@@ -156,3 +156,54 @@
 // const index = 2;
 // cards.splice(index,1,cardToUpdate);
 // console.log(cards);
+
+// task 1 
+// let arr = ['Ваня','Иштван','Оля',];
+// console.log(arr);
+// arr[1] = 'Петя';
+// console.log(arr);
+
+// const genres = ["Jazz", "Blues"];
+// genres.push("Rock n roll");
+// console.log(genres);
+// console.log(genres[0]);
+// console.log(genres[genres.length-1]);
+// console.log(genres.shift());
+
+// ______________________________________
+// Площадь треугольника
+// const values = "8 11";
+// const numbers = values.split(" ");
+// console.log(numbers);
+// const area = ( numbers[0] * numbers[1]) / 2;
+// console.log(area);
+// _________________________________________
+// Вывести по порядку 1: яблоко и т.д.
+// const fruits = ["apple", "banan", "lemon", "pea"];
+// for (let i = 0; i < fruits.length; i += 1) {
+//     const element = fruits[i];
+//     const index = i + 1; 
+//     console.log(`${index}: ${element}`);
+// }
+// _________________________________________
+// Имя и телефонный номер
+// const names = 'Jacob,William,Solomon,Artemis';
+// const phones = '8900123456,8900123455,8900123454,8900123453,8900123452,8900123451';
+
+// const arrNames = names.split(",");
+// const arrPhones = phones.split(",");
+
+// let longestArray = arrNames.length > arrPhones.length ? arrNames : arrPhones;
+
+// for (let i = 0; i < longestArray.length; i += 1) {
+//     const name = arrNames[i] === undefined ? `No name` : arrNames[i];
+//     const phone = arrPhones[i] === undefined ? `No phone` : arrPhones[i];;
+//     console.log(`${name} - ${phone}`);
+// };
+ // _________________________________________
+// Максимальное из чисел
+// const numbers = [2, 17, 94, 23, 47];
+// const a = Math.max(...numbers);
+// console.log(a);
+// _________________________________________
+// 

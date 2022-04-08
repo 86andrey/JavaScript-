@@ -25,7 +25,7 @@
 // }
 // return min;
 // }
-// console.log(findSmallestNumber([51, 18, 13, 24, -7, 2, 19]));
+// console.log(findSmallestNumber(numbers));
 
 // function calculateTotalPrice(order) {
 //     let total = 0;
@@ -102,3 +102,31 @@
   //  console.log(book.author);
   //  console.log(book.rating);
 //  }
+// _____________________________________________________
+// Функция для расчета Площади треугольника
+// function getRectArea (dimension) {
+//   const numbers = dimension.split(" ");
+//   const area = ( numbers[0] * numbers[1]) / 2;
+//   return area;
+// }
+// console.log(getRectArea('2 8'));
+
+// пользователь вводит данные с расчетом если не то введет !!! 
+// Нужно учитывать критерии отрицательных сценариев !!! 
+// function getRectArea (width, hight) {
+//   if (isNaN (width) || isNaN (hight)) {
+//     alert("Введите корректное значение");
+//     return;
+// } 
+//   if (width === null || hight === null) {
+//     alert("Вы не завершили операцию ввода");
+//     return;
+// }
+//   return (width * hight) / 2;
+// }
+// const width = prompt("Enter width");
+// const hight = prompt("Enter hight");
+// console.log(getRectArea(width, hight));
+
+// _____________________________________________________
+// Функция для расчета среднего значения

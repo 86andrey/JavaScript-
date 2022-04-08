@@ -14,18 +14,18 @@
 // playlist.getName();
 // playlist.addTrack('new-classic');
 // console.log(playlist);
-
+// ____________________________________________________
 // const x = {};
 // console.log({});
 // const fn = function (myObject) {
 //     console.log(myObject);
 // }
 // fn({a: 4, b: 8});
-
+// ____________________________________________________
 // const sd = function () {
 //     return {a: 5};
 // }
-
+// ____________________________________________________
 // const friends = [
 //     {name: 'Mango', online: false},
 //     {name: 'kiwi', online: false},
@@ -36,7 +36,7 @@
 // for (const friend of friends) {
 //     console.log(friend.name);   
 // }
-
+// ____________________________________________________
 // const getOnlineFriends = function (allFriends) {
 //     const friendOnline = [];
 // for (const friend of allFriends) {
@@ -46,7 +46,7 @@
 // } return friendOnline;
 // }
 // console.log(getOnlineFriends(friends));
-
+// ____________________________________________________
 // const cart = {
 //     items: [],
 //     getItems() {},
@@ -61,27 +61,22 @@
 // card.add({name: 'яблоко', price: 50});
 // card.add({name: 'яблоко', price: 50});
 // card.add({name: 'яблоко', price: 50});
-
+// ____________________________________________________
 // function countProps(object) {
 //     // Change code below this line
 //     let propCount = 0;
 //   const keys = Object.keys(object);
-  
 //     for (const key of keys) {
 //       if (object.hasOwnProperty(key)) {
 //         propCount = Object.values(object).length;
 //       };
 //     };
-  
 //     return propCount;
 //     // Change code above this line
 //   };
 //   console.log(countProps(object));
 
-
-
 // __________________________________________________________
-
 // const products = [
 //   { name: "Radar", price: 1300, quantity: 4 },
 //   { name: "Scanner", price: 2700, quantity: 3 },
@@ -101,14 +96,10 @@
 //     console.log(4444);
 //   }
 // }console.log(`нет такого`);
-// __________________________________________________________
-
-
-
-
 // console.log(getProductPrice("name"));
 // console.log(products);
 
+// ____________________________________________________
 // const products = [
 //   { name: "Radar", price: 1300, quantity: 4 },
 //   { name: "Scanner", price: 2700, quantity: 3 },
@@ -121,12 +112,12 @@
 //   // console.log(key);
 //   if (key.name === propName) {
 //   return products[key]};
-  
-// }; return 2;
+// }; 
+// return 2;
 // }
 // console.log(getAllPropValues("Radar"));
 
-
+// ____________________________________________________
 // const products = [
 //   { name: "Radar", price: 1300, quantity: 4 },
 //   { name: "Scanner", price: 2700, quantity: 3 },
@@ -147,6 +138,7 @@
 //   }
 // console.log(getAllPropValues("name"));
 
+// ____________________________________________________
 // const products = [
 //   { name: "Radar", price: 1300, quantity: 4 },
 //   { name: "Scanner", price: 2700, quantity: 3 },
@@ -165,11 +157,10 @@
 //   };
 // };
 // return 0;
-
-//   // Пиши код выше этой строки
 // };
 // console.log(calculateTotalPrice("Droid"));
 
+// ____________________________________________________
 // const playlist = {
 //       ret: 'мой супер плейлист',
 //       rating: 2,
@@ -187,6 +178,7 @@
 
 //   console.log(ret);
 
+// ____________________________________________________
 // function add(a, ...args) {
 //   // console.log(a,args);
 //   let total = [];
@@ -199,10 +191,9 @@
 //    };
 //   } return total;
 //   };
-  
-  
 // console.log(add([1, 2, 3, 4, 5], 1, 8, 2, 7));
 
+// ____________________________________________________
 // function findMatches(a,s,d) {
 //   console.log(findMatches);
 //   // const matches = [];
@@ -210,7 +201,7 @@
 // }
 // console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
 
-
+// ____________________________________________________
 // const atTheOldToad = {
 //   potions: [
 //     { name: "Speed potion", price: 460 },
