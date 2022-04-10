@@ -11,7 +11,7 @@
 // console.log(findToLogin(logins, '5689jj'));
 
 // ___________________________________________________
-// * Напиши функцию поиска самого мальнького числа в массиве
+// * Напиши функцию поиска самого маленького числа в массиве
 // * при условии что числа уникальные (не повторяются)
 // условие - если к первому числу ты меньше - то замени его,
 //  иначе продолжай дальше
@@ -130,3 +130,24 @@
 
 // _____________________________________________________
 // Функция для расчета среднего значения
+// function calAverage(...expression) {
+// const sumIndex = expression.length;
+// let total = 0;
+//   for (let i of expression){
+//     total += i;
+//   } 
+//   return total / sumIndex;
+// }
+// console.log(calAverage(2, 4, 2, 2));
+
+// _____________________________________________________
+// Форматирование времени (таймер обратного времени)
+// function formatTime(minutes) {
+//   const hours = Number.parseInt(minutes / 60);
+//   const min = minutes % 60;
+//   const converHours = hours < 10 ? `0${hours}` : hours;
+//   const converMin = min < 10 ? `0${min}` : min;
+//   return `${converHours}:${converMin}`;
+// }
+// console.log(formatTime(450));
+// console.log(formatTime(150));
