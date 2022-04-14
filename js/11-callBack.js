@@ -8,6 +8,43 @@
 // register("Андрей", greet);
 
 // ____________________________________________________
+
+// Отложенный вызов: регистрация событий
+
+// 1. получаем ссылку на кнопку
+// const buttonRef = document.querySelector('.js-button');
+
+// const handleBtnClick = function() {
+//   console.log('Клик по кнопке' + Date.now());
+// }
+// 2. Добавить слушателя события (укажи событие и укажи ф-цию)
+// Это единственный способ зарегистрировать выполнение какого то кода по событию
+// buttonRef.addEventListener('click', handleBtnClick);
+
+// ____________________________________________________
+
+// Приватные данные и функции - скрытие реализации, интерфейс
+const myLibfac = function() {
+
+  let secretPassword = 100;
+
+  const add = (num) => secretPassword += num;
+  const getValue = () => secretPassword;
+
+  return {
+    add,
+    getValue,
+  };
+};
+
+
+const myLib = myLibfac();
+
+console.log(myLib.add(15));
+
+
+
+// ____________________________________________________
 // Инлайн колбэк !!! 
 // function registerGuest(name, callback) {
 //     console.log(`Регистрируем гостя ${name}.`);
@@ -81,78 +118,79 @@
 //   return previousValue + number;
 // });
 
-const getTotalBalanceByGender = (users, gender) => {
-  const total = [...users]
-  .filter(course => course.gender === gender)
-  .map(student => student.balance)
-  .reduce((previousValue, number) => {
-        return previousValue + number;
-});
-return total;
-};
-// Change code above this line
-console.log(getTotalBalanceByGender([
- {
-   name: "Moore Hensley",
-   email: "moorehensley@indexia.com",
-   eyeColor: "blue",
-   friends: ["Sharron Pace"],
-   isActive: false,
-   balance: 2811,
-   gender: "male"
- },
- {
-   name: "Sharlene Bush",
-   email: "sharlenebush@tubesys.com",
-   eyeColor: "blue",
-   friends: ["Briana Decker", "Sharron Pace"],
-   isActive: true,
-   balance: 3821,
-   gender: "female"
- },
- {
-   name: "Ross Vazquez",
-   email: "rossvazquez@xinware.com",
-   eyeColor: "green",
-   friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-   isActive: false,
-   balance: 3793,
-   gender: "male"
- },
- {
-   name: "Elma Head",
-   email: "elmahead@omatom.com",
-   eyeColor: "green",
-   friends: ["Goldie Gentry", "Aisha Tran"],
-   isActive: true,
-   balance: 2278,
-   gender: "female"
- },
- {
-   name: "Carey Barr",
-   email: "careybarr@nurali.com",
-   eyeColor: "blue",
-   friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
-   isActive: true,
-   balance: 3951,
-   gender: "male"
- },
- {
-   name: "Blackburn Dotson",
-   email: "blackburndotson@furnigeer.com",
-   eyeColor: "brown",
-   friends: ["Jacklyn Lucas", "Linda Chapman", "Adrian Cross", "Solomon Fokes"],
-   isActive: false,
-   balance: 1498,
-   gender: "male"
- },
- {
-   name: "Sheree Anthony",
-   email: "shereeanthony@kog.com",
-   eyeColor: "brown",
-   friends: ["Goldie Gentry", "Briana Decker"],
-   isActive: true,
-   balance: 2764,
-   gender: "female"
- }
-], "female"))
+// const getTotalBalanceByGender = (users, gender) => {
+//   const total = [...users]
+//   .filter(course => course.gender === gender)
+//   .map(student => student.balance)
+//   .reduce((previousValue, number) => {
+//         return previousValue + number;
+// });
+// return total;
+// };
+// // Change code above this line
+// console.log(getTotalBalanceByGender([
+//  {
+//    name: "Moore Hensley",
+//    email: "moorehensley@indexia.com",
+//    eyeColor: "blue",
+//    friends: ["Sharron Pace"],
+//    isActive: false,
+//    balance: 2811,
+//    gender: "male"
+//  },
+//  {
+//    name: "Sharlene Bush",
+//    email: "sharlenebush@tubesys.com",
+//    eyeColor: "blue",
+//    friends: ["Briana Decker", "Sharron Pace"],
+//    isActive: true,
+//    balance: 3821,
+//    gender: "female"
+//  },
+//  {
+//    name: "Ross Vazquez",
+//    email: "rossvazquez@xinware.com",
+//    eyeColor: "green",
+//    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//    isActive: false,
+//    balance: 3793,
+//    gender: "male"
+//  },
+//  {
+//    name: "Elma Head",
+//    email: "elmahead@omatom.com",
+//    eyeColor: "green",
+//    friends: ["Goldie Gentry", "Aisha Tran"],
+//    isActive: true,
+//    balance: 2278,
+//    gender: "female"
+//  },
+//  {
+//    name: "Carey Barr",
+//    email: "careybarr@nurali.com",
+//    eyeColor: "blue",
+//    friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
+//    isActive: true,
+//    balance: 3951,
+//    gender: "male"
+//  },
+//  {
+//    name: "Blackburn Dotson",
+//    email: "blackburndotson@furnigeer.com",
+//    eyeColor: "brown",
+//    friends: ["Jacklyn Lucas", "Linda Chapman", "Adrian Cross", "Solomon Fokes"],
+//    isActive: false,
+//    balance: 1498,
+//    gender: "male"
+//  },
+//  {
+//    name: "Sheree Anthony",
+//    email: "shereeanthony@kog.com",
+//    eyeColor: "brown",
+//    friends: ["Goldie Gentry", "Briana Decker"],
+//    isActive: true,
+//    balance: 2764,
+//    gender: "female"
+//  }
+// ], "female"))
+
