@@ -24,23 +24,23 @@
 // ____________________________________________________
 
 // Приватные данные и функции - скрытие реализации, интерфейс
-const myLibfac = function() {
+// const myLibfac = function() {
 
-  let secretPassword = 100;
+//   let secretPassword = 100;
 
-  const add = (num) => secretPassword += num;
-  const getValue = () => secretPassword;
+//   const add = (num) => secretPassword += num;
+//   const getValue = () => secretPassword;
 
-  return {
-    add,
-    getValue,
-  };
-};
+//   return {
+//     add,
+//     getValue,
+//   };
+// };
 
 
-const myLib = myLibfac();
+// const myLib = myLibfac();
 
-console.log(myLib.add(15));
+// console.log(myLib.add(15));
 
 
 
@@ -194,3 +194,21 @@ console.log(myLib.add(15));
 //  }
 // ], "female"))
 
+// ________________________________________
+const filter = function (array, test) {
+  const filteredArray = [];
+  for (const el of array) {
+    const passed = test(el);
+      if (passed) {
+        filteredArray.push(el);
+      }
+  } return filteredArray;
+};
+
+const fruits = [
+  {name: 'ap', quantity: 200, isFresh: true},
+  {name: 'rt', quantity: 150, isFresh: false},
+  {name: 'et', quantity: 100, isFresh: true},
+];
+
+console.log(filter(fruits, fruit => fruit.quantity > 120));

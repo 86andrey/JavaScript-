@@ -254,6 +254,9 @@
 // };
 // console.log(calcTotalPrice(stones, 'Щебень')); // 400
 
+
+
+
 // ___________________________________________________________________________________
 // ## Example 4 - Комплексные задачи
 
@@ -266,6 +269,8 @@
 //  * Типов транзацкий всего два.
 //  * Можно положить либо снять деньги со счета.
 //  */
+
+
 const Transaction = {
   DEPOSIT: "deposit",
   WITHDRAW: "withdraw",
@@ -276,10 +281,10 @@ const Transaction = {
 //  */
 
 const account = {
-  // Текущий баланс счета
+                // Текущий баланс счета
   balance: 0,
 
-  // История транзакций
+                // История транзакций
   transactions: [],
 
   /*
@@ -304,8 +309,7 @@ const account = {
   deposit(amount) {
     // let amount = 135
     this.balance += amount; // this.balance + 135
-    const transaction = this.createTransaction(amount, Transaction.DEPOSIT); // this.createTransaction(135, Transaction.DEPOSIT);
-    this.transactions.push(transaction);
+    this.transactions.push(this.createTransaction(amount, Transaction.DEPOSIT));
   },
 
   /*
@@ -363,16 +367,17 @@ const account = {
 };
 // ```
 
-console.log(account.getBalance());
-account.deposit(135);
-account.withdraw(50);
-account.withdraw(60);
-account.withdraw(10);
-account.deposit(200);
-account.deposit(2000);
-account.withdraw(500);
-console.log(account.getTransactionDetails(24));
-console.log(account);
-console.log(account.getTransactionTotal(Transaction.WITHDRAW));
-
+// console.log(account.getBalance());
+// account.deposit(135);
+// account.withdraw(50);
+// account.withdraw(60);
+// account.withdraw(10);
+// account.deposit(200);
+// account.deposit(2000);
+// account.withdraw(500);
+// console.log(account.getTransactionDetails(1));
+// console.log(account);
+// console.log(account.getTransactionTotal(Transaction.WITHDRAW));
+// console.log(account.transactions);
 // transaction['type'] === transaction.type // 'deposit' 'withdraw'
+
