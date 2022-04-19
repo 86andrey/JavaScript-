@@ -271,34 +271,34 @@
 //  */
 
 
-const Transaction = {
-  DEPOSIT: "deposit",
-  WITHDRAW: "withdraw",
-};
+// const Transaction = {
+//   DEPOSIT: "deposit",
+//   WITHDRAW: "withdraw",
+// };
 
 // /*
 //  * Каждая транзакция это объект со свойствами: id, type и amount
 //  */
 
-const account = {
+// const account = {
                 // Текущий баланс счета
-  balance: 0,
+  // balance: 0,
 
                 // История транзакций
-  transactions: [],
+  // transactions: [],
 
   /*
    * Метод создает и возвращает объект транзакции.
    * Принимает сумму и тип транзакции.
    */
-  createTransaction(amount, type) {
+  // createTransaction(amount, type) {
     // 135
-    return {
-      amount, // amount : 135
-      type, // type: 'deposit
-      id: this.transactions.length,
-    };
-  },
+    // return {
+  //     amount, // amount : 135
+  //     type, // type: 'deposit
+  //     id: this.transactions.length,
+  //   };
+  // },
 
   /*
    * Метод отвечающий за добавление суммы к балансу.
@@ -306,11 +306,11 @@ const account = {
    * Вызывает createTransaction для создания объекта транзакции
    * после чего добавляет его в историю транзакций
    */
-  deposit(amount) {
-    // let amount = 135
-    this.balance += amount; // this.balance + 135
-    this.transactions.push(this.createTransaction(amount, Transaction.DEPOSIT));
-  },
+  // deposit(amount) {
+  //   // let amount = 135
+  //   this.balance += amount; // this.balance + 135
+  //   this.transactions.push(this.createTransaction(amount, Transaction.DEPOSIT));
+  // },
 
   /*
    * Метод отвечающий за снятие суммы с баланса.
@@ -321,50 +321,48 @@ const account = {
    * Если amount больше чем текущий баланс, выводи сообщение
    * о том, что снятие такой суммы не возможно, недостаточно средств.
    */
-  withdraw(amount) {
-    if (amount > this.balance) {
-      return "У Вас недостатньо коштів";
-    }
-    this.balance -= amount;
-    const transaction = this.createTransaction(amount, Transaction.WITHDRAW);
-    this.transactions.push(transaction);
-  },
+//   withdraw(amount) {
+//     if (amount > this.balance) {
+//       return "У Вас недостатньо коштів";
+//     }
+//     this.balance -= amount;
+//     const transaction = this.createTransaction(amount, Transaction.WITHDRAW);
+//     this.transactions.push(transaction);
+//   },
 
-  /*
-   * Метод возвращает текущий баланс
-   */
-  getBalance() {
-    // let this = account
-    return this.balance;
-  },
+//   /*
+//    * Метод возвращает текущий баланс
+//    */
+//   getBalance() {
+//     // let this = account
+//     return this.balance;
+//   },
 
-  /*
-   * Метод ищет и возвращает объект транзации по id
-   */
-  getTransactionDetails(id) {
-    for (let transaction of this.transactions) {
-      if (transaction.id === id) {
-        return transaction;
-      }
-    }
-    return "Такої операції не існує";
-  },
+//   /*
+//    * Метод ищет и возвращает объект транзации по id
+//    */
+//   getTransactionDetails(id) {
+//     for (let transaction of this.transactions) {
+//       if (transaction.id === id) {
+//         return transaction;
+//       }
+//     }
+//     return "Такої операції не існує";
+//   },
 
-  /*
-   * Метод возвращает количество средств
-   * определенного типа транзакции из всей истории транзакций
-   */
-  getTransactionTotal(variant) {
-    let total = 0;
-
-    for (let transaction of this.transactions) {
-      if (transaction.type === variant) {
-        total += transaction.amount;
-      }
-    }
-    return total;
-  },
-};
+//   /*
+//    * Метод возвращает количество средств
+//    * определенного типа транзакции из всей истории транзакций
+//    */
+//   getTransactionTotal(variant) {
+//     let total = 0;
+//     for (let transaction of this.transactions) {
+//       if (transaction.type === variant) {
+//         total += transaction.amount;
+//       }
+//     } return total;
+//   },
+// };
 // ```
 
 // console.log(account.getBalance());

@@ -5,11 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Callback-функции</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .counter {
+            display: flex;
+            align-items: center;
+        }
+
+        .counter > p {
+            margin: 0;
+            font-size: 48px;
+            font-family: monospace;
+        }
+
+    </style>
 </head>
 <body>
     <button class="js-button">
         Это кнопка
     </button>
+
+    <div class="counter">
+        <button class="js-decrement">Уменьшить</button>
+        <p class="js-value">0</p>
+        <button class="js-increment">Увеличить</button>
+    </div>
+
     <script src="./js/01-vars.js" type="module"></script>
     <script src="./js/02-logoperator.js" type="module"></script>
     <script src="./js/03-tasksegment.js" type="module"></script>
@@ -21,5 +45,8 @@
     <script src="./js/09-function.js" type="module"></script>
     <script src="./js/10-Object.js" type="module"></script>
     <script src="./js/11-callBack.js" type="module"></script>
+    <script src="./js/12-Method-bind.js" type="module"></script>
+    <script src="./js/13-THIS.js" type="module"></script>
+    <script src="./js/codewars.js" type="module"></script>
 </body>
 </html>
