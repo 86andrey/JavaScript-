@@ -45,47 +45,47 @@
 
 // ```js
 // // Решение
-const TRANSACTION_LIMIT = 1000;
+// const TRANSACTION_LIMIT = 1000;
 
-const account = {
-  username: 'Jacob',
-  balance: 400,
-  withdraw(amount, onSuccess, onError) {
-    if (amount > TRANSACTION_LIMIT) {
-      onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
-    } else if (amount > this.balance) {
-      onError(`Amount can't exceed account balance of ${this.balance} credits`);
-    } else {
-      this.balance -= amount;
-      onSuccess(`Account balance: ${this.balance}`);
-    }
-  },
-  deposit(amount, onSuccess, onError) {
-    if (amount > TRANSACTION_LIMIT) {
-      onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
-    } else if (amount <= 0) {
-      onError(`Amount must be more than 0 credits`);
-    } else {
-      this.balance += amount;
-      onSuccess(`Account balance: ${this.balance}`);
-    }
-  },
-};
+// const account = {
+//   username: 'Jacob',
+//   balance: 400,
+//   withdraw(amount, onSuccess, onError) {
+//     if (amount > TRANSACTION_LIMIT) {
+//       onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
+//     } else if (amount > this.balance) {
+//       onError(`Amount can't exceed account balance of ${this.balance} credits`);
+//     } else {
+//       this.balance -= amount;
+//       onSuccess(`Account balance: ${this.balance}`);
+//     }
+//   },
+//   deposit(amount, onSuccess, onError) {
+//     if (amount > TRANSACTION_LIMIT) {
+//       onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
+//     } else if (amount <= 0) {
+//       onError(`Amount must be more than 0 credits`);
+//     } else {
+//       this.balance += amount;
+//       onSuccess(`Account balance: ${this.balance}`);
+//     }
+//   },
+// };
 
-function handleSuccess(message) {
-  console.log(`✅ Success! ${message}`);
-}
-function handleError(message) {
-  console.log(`❌ Error! ${message}`);
-}
+// function handleSuccess(message) {
+//   console.log(`✅ Success! ${message}`);
+// }
+// function handleError(message) {
+//   console.log(`❌ Error! ${message}`);
+// }
 
-account.withdraw(2000, handleSuccess, handleError);
-account.withdraw(600, handleSuccess, handleError);
-account.withdraw(300, handleSuccess, handleError);
-account.deposit(1700, handleSuccess, handleError);
-account.deposit(0, handleSuccess, handleError);
-account.deposit(-600, handleSuccess, handleError);
-account.deposit(600, handleSuccess, handleError);
+// account.withdraw(2000, handleSuccess, handleError);
+// account.withdraw(600, handleSuccess, handleError);
+// account.withdraw(300, handleSuccess, handleError);
+// account.deposit(1700, handleSuccess, handleError);
+// account.deposit(0, handleSuccess, handleError);
+// account.deposit(-600, handleSuccess, handleError);
+// account.deposit(600, handleSuccess, handleError);
 // ```
 
 // ## Example 3 - Коллбек функции
@@ -159,47 +159,47 @@ account.deposit(600, handleSuccess, handleError);
 // Выполните рефакторинг кода используя стрелочные функции.
 
 // ```js
-// const TRANSACTION_LIMIT = 1000;
+const TRANSACTION_LIMIT = 1000;
 
-// const account = {
-//   username: 'Jacob',
-//   balance: 400,
-//   withdraw(amount, onSuccess, onError) {
-//     if (amount > TRANSACTION_LIMIT) {
-//       onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
-//     } else if (amount > this.balance) {
-//       onError(`Amount can't exceed account balance of ${this.balance} credits`);
-//     } else {
-//       this.balance -= amount;
-//       onSuccess(`Account balance: ${this.balance}`);
-//     }
-//   },
-//   deposit(amount, onSuccess, onError) {
-//     if (amount > TRANSACTION_LIMIT) {
-//       onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
-//     } else if (amount <= 0) {
-//       onError(`Amount must be more than 0 credits`);
-//     } else {
-//       this.balance += amount;
-//       onSuccess(`Account balance: ${this.balance}`);
-//     }
-//   },
-// };
+const account = {
+  username: 'Jacob',
+  balance: 400,
+  withdraw(amount, onSuccess, onError) {
+    if (amount > TRANSACTION_LIMIT) {
+      onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
+    } else if (amount > this.balance) {
+      onError(`Amount can't exceed account balance of ${this.balance} credits`);
+    } else {
+      this.balance -= amount;
+      onSuccess(`Account balance: ${this.balance}`);
+    }
+  },
+  deposit(amount, onSuccess, onError) {
+    if (amount > TRANSACTION_LIMIT) {
+      onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
+    } else if (amount <= 0) {
+      onError(`Amount must be more than 0 credits`);
+    } else {
+      this.balance += amount;
+      onSuccess(`Account balance: ${this.balance}`);
+    }
+  },
+};
 
-// function handleSuccess(message) {
-//   console.log(`✅ Success! ${message}`);
-// }
-// function handleError(message) {
-//   console.log(`❌ Error! ${message}`);
-// }
+function handleSuccess(message) {
+  console.log(`✅ Success! ${message}`);
+}
+function handleError(message) {
+  console.log(`❌ Error! ${message}`);
+}
 
-// account.withdraw(2000, handleSuccess, handleError);
-// account.withdraw(600, handleSuccess, handleError);
-// account.withdraw(300, handleSuccess, handleError);
-// account.deposit(1700, handleSuccess, handleError);
-// account.deposit(0, handleSuccess, handleError);
-// account.deposit(-600, handleSuccess, handleError);
-// account.deposit(600, handleSuccess, handleError);
+account.withdraw(2000, handleSuccess, handleError);
+account.withdraw(600, handleSuccess, handleError);
+account.withdraw(300, handleSuccess, handleError);
+account.deposit(1700, handleSuccess, handleError);
+account.deposit(0, handleSuccess, handleError);
+account.deposit(-600, handleSuccess, handleError);
+account.deposit(600, handleSuccess, handleError);
 // ```
 
 // ## Example 6 - Инлайн стрелочные функции
@@ -298,7 +298,7 @@ account.deposit(600, handleSuccess, handleError);
 
 
 // function greet(name) {
-//     console.log(`Добро пожаловать ${name}!`);   
+//     console.log(`Добро пожаловать ${name}!`);
 // }
 // function register(name, callback) {
 //     console.log(`регистрируем гостя ${name}`);
@@ -344,7 +344,7 @@ account.deposit(600, handleSuccess, handleError);
 
 
 // ____________________________________________________
-// Инлайн колбэк !!! 
+// Инлайн колбэк !!!
 // function registerGuest(name, callback) {
 //     console.log(`Регистрируем гостя ${name}.`);
 //     callback(name);
@@ -357,7 +357,7 @@ account.deposit(600, handleSuccess, handleError);
 //     console.log(`Уважаемый(ая) ${name}, ваш номер будет готов через 30 минут.`);
 //   });
 // _____________________________________________________________
-// !!! Обработка заказа пиццы !!! 
+// !!! Обработка заказа пиццы !!!
 // Если в свойстве pizzas нет пиццы pizzaName, метод order должен возвращать результат вызова колбэка onError, передавая ему аргументом строку "There is no pizza with a name <имя пиццы> in the assortment."
 // Если в свойстве pizzas есть пицца pizzaName, метод order должен возвращать результат вызова колбэка onSuccess, передавая ему аргументом имя заказанной пиццы.
 
@@ -368,7 +368,7 @@ account.deposit(600, handleSuccess, handleError);
           
 //       if (item === pizzaName) {
 //       return onSuccess(pizzaName);
-//     } 
+//     }
 //     } return onError(pizzaName)
 //   }
 // }
@@ -511,3 +511,4 @@ account.deposit(600, handleSuccess, handleError);
 // ];
 
 // console.log(filter(fruits, fruit => fruit.quantity > 120));
+
