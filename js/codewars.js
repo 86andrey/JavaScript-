@@ -51,33 +51,41 @@
 // console.log(mango.isBlacklisted("mango@mail.com")); // false
 // console.log(mango.isBlacklisted("poly@mail.com")); // true
 // _________________________________________________________________
-class User {
-  // Необязательное объявление публичных свойств
-  name;
-  // Обязательное объявление приватных свойств
-  #email;
+// class User {
+//   // Необязательное объявление публичных свойств
+//   name;
+//   // Обязательное объявление приватных свойств
+//   #email;
 
-  constructor({ name, email }) {
-    this.name = name;
-    this.#email = email;
-  }
+//   constructor({ name, email }) {
+//     this.name = name;
+//     this.#email = email;
+//   }
 
-  getEmail() {
-    return this.#email;
-  }
+//   getEmail() {
+//     return this.#email;
+//   }
 
-  changeEmail(newEmail) {
-    this.#email = newEmail;
-  }
-}
+//   changeEmail(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
 
-const mango = new User({
-  name: "Манго",
-  email: "mango@mail.com",
-});
+// const mango = new User({
+//   name: "Манго",
+//   email: "mango@mail.com",
+// });
 
-mango.changeEmail("mango@supermail.com");
-console.log(mango.getEmail());  
-mango.name = "Poly";
-mango.email = "Private@mail.com";
-console.log(mango);
+// mango.changeEmail("mango@supermail.com");
+// console.log(mango.getEmail());
+// mango.name = "Poly";
+// mango.email = "Private@mail.com";
+// console.log(mango);
+
+
+ 
+// const pre = 'This looks2 grea8t!';
+// console.log(pre.split('').filter(el => el.charCodeAt() < 49 || el.charCodeAt() > 57).join(''));
+
+const pre = [1, -4, 7, 12];
+console.log(pre.filter(el => el >= 0).reduce((total, el) => total + el, 0));

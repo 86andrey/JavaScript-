@@ -99,27 +99,23 @@
 // // Решение
 // function each(array, callback) {
 //   const newArr = [];
-//   for (const el of array) {
-//     newArr.push(callback(el));
+//   for (const element of array) {
+//     newArr.push(callback(element));
 //   }
 //   return newArr;
 // }
 
 // console.log(
-//   each([64, 49, 36, 25, 16], function (value) {
-//     return value * 2;
-//   }),
-// );
+//   each([64, 49, 36, 25, 16], value => value * 2));
+
 // console.log(
 //   each([64, 49, 36, 25, 16], function (value) {
 //     return value - 10;
 //   }),
 // );
 // console.log(
-//   each([64, 49, 36, 25, 16], function (value) {
-//     return Math.sqrt(value);
-//   }),
-// );
+//   each([64, 49, 36, 25, 16], value => Math.sqrt(value)));
+
 // console.log(
 //   each([1.5, 2.1, 16.4, 9.7, 11.3], function (value) {
 //     return Math.ceil(value);
@@ -159,47 +155,47 @@
 // Выполните рефакторинг кода используя стрелочные функции.
 
 // ```js
-const TRANSACTION_LIMIT = 1000;
+// const TRANSACTION_LIMIT = 1000;
 
-const account = {
-  username: 'Jacob',
-  balance: 400,
-  withdraw(amount, onSuccess, onError) {
-    if (amount > TRANSACTION_LIMIT) {
-      onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
-    } else if (amount > this.balance) {
-      onError(`Amount can't exceed account balance of ${this.balance} credits`);
-    } else {
-      this.balance -= amount;
-      onSuccess(`Account balance: ${this.balance}`);
-    }
-  },
-  deposit(amount, onSuccess, onError) {
-    if (amount > TRANSACTION_LIMIT) {
-      onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
-    } else if (amount <= 0) {
-      onError(`Amount must be more than 0 credits`);
-    } else {
-      this.balance += amount;
-      onSuccess(`Account balance: ${this.balance}`);
-    }
-  },
-};
+// const account = {
+//   username: 'Jacob',
+//   balance: 400,
+//   withdraw(amount, onSuccess, onError) {
+//     if (amount > TRANSACTION_LIMIT) {
+//       onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
+//     } else if (amount > this.balance) {
+//       onError(`Amount can't exceed account balance of ${this.balance} credits`);
+//     } else {
+//       this.balance -= amount;
+//       onSuccess(`Account balance: ${this.balance}`);
+//     }
+//   },
+//   deposit(amount, onSuccess, onError) {
+//     if (amount > TRANSACTION_LIMIT) {
+//       onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
+//     } else if (amount <= 0) {
+//       onError(`Amount must be more than 0 credits`);
+//     } else {
+//       this.balance += amount;
+//       onSuccess(`Account balance: ${this.balance}`);
+//     }
+//   },
+// };
 
-function handleSuccess(message) {
-  console.log(`✅ Success! ${message}`);
-}
-function handleError(message) {
-  console.log(`❌ Error! ${message}`);
-}
+// function handleSuccess(message) {
+//   console.log(`✅ Success! ${message}`);
+// }
+// function handleError(message) {
+//   console.log(`❌ Error! ${message}`);
+// }
 
-account.withdraw(2000, handleSuccess, handleError);
-account.withdraw(600, handleSuccess, handleError);
-account.withdraw(300, handleSuccess, handleError);
-account.deposit(1700, handleSuccess, handleError);
-account.deposit(0, handleSuccess, handleError);
-account.deposit(-600, handleSuccess, handleError);
-account.deposit(600, handleSuccess, handleError);
+// account.withdraw(2000, handleSuccess, handleError);
+// account.withdraw(600, handleSuccess, handleError);
+// account.withdraw(300, handleSuccess, handleError);
+// account.deposit(1700, handleSuccess, handleError);
+// account.deposit(0, handleSuccess, handleError);
+// account.deposit(-600, handleSuccess, handleError);
+// account.deposit(600, handleSuccess, handleError);
 // ```
 
 // ## Example 6 - Инлайн стрелочные функции
@@ -253,6 +249,10 @@ account.deposit(600, handleSuccess, handleError);
 //     console.log(`${i + 1} - ${items[i]}`);
 //   }
 // }
+// Метод forEach
+// function logItems(items) {
+//   items.forEach((item, index) => console.log(`${index + 1} - ${item}`))
+// }
 
 // logItems(['Mango', 'Poly', 'Ajax']);
 // logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
@@ -270,7 +270,11 @@ account.deposit(600, handleSuccess, handleError);
 //     console.log(`${nameList[i]}: ${phoneList[i]}`);
 //   }
 // }
-
+// function printContactsInfo({ names, phones }) {
+//   const nameList = names.split(',');
+//   const phoneList = phones.split(',');
+//   nameList.forEach((item, index) => console.log(`${item}:${phoneList[index]}`))
+// }
 // printContactsInfo({
 //   names: 'Jacob,William,Solomon,Artemis',
 //   phones: '89001234567,89001112233,890055566377,890055566300',
@@ -289,6 +293,12 @@ account.deposit(600, handleSuccess, handleError);
 //   }
 //   return total / args.length;
 // }
+// function calсulateAverage(...args) {
+//   let total = 0;
+//   args.forEach(arg => total += arg);
+//   return total / args.length;
+// }
+
 
 // console.log(calсulateAverage(1, 2, 3, 4)); // 2.5
 // console.log(calсulateAverage(14, 8, 2)); // 8
