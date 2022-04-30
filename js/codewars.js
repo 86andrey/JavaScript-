@@ -146,7 +146,7 @@ const chooseOptimalDistance2 = (d, k, ls) => {
     return maxDist > 0 ? maxDist : null;
   };
 
-  if (ls.length === 3) return getMaxDist([ls]);
+  if (ls.length === k) return getMaxDist([ls]);
 
   const combinations = [];
   const getComb = (level, comb, rest) => {
@@ -162,9 +162,6 @@ const chooseOptimalDistance2 = (d, k, ls) => {
   return getMaxDist(combinations);
 };
 
-console.log('Version 2:');
-console.log(chooseOptimalDistance2(174, 3, [51, 56, 58, 59, 61])); //173
-console.log(chooseOptimalDistance2(163, 3, [50])); // null
 console.log(chooseOptimalDistance2(163, 3, [50, 51, 49])); // 150
 
 // ____________________________________________________________________
@@ -201,9 +198,10 @@ console.log(chooseOptimalDistance2(163, 3, [50, 51, 49])); // 150
 // *
 // Вычисление факториала через рекурсию
 // *
-// function Factorial(x) {
-//     if (x < 0) return;
+// function factorial(x) {
+//     if (x < 0) return `Такого значения нет`;
 //     if (x === 0) return 1;
-//     return x * Factorial(x-1);
+//     return x * factorial(x-1);
 // }
-// console.log(Factorial(4));
+// console.log(factorial(-1));
+
