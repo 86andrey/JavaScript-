@@ -93,7 +93,7 @@
 // ___________________________________________________________________________________________________________
 // Завдання до виконання мовою JavaScript
 // *
-// Ділан і Кейт хочуть подорожувати між кількома містами А, В, С.... 
+// Ділан і Кейт хочуть подорожувати між кількома містами А, В, С....
 // Кейт має на аркуші паперу список відстаней між цими містами.
 // ls = [51, 56, 58, 59, 61].Ділан втомився їздити, і він каже Кейт,
 //  що не хоче їхати більше t = 174 милі, і він відвідає лише 3 міста.
@@ -132,37 +132,37 @@
 // Функція chooseOptimalDistance приймає параметри:
 // t (максимальна сума відстаней, ціле число >= 0),
 // k (кількість міст, які потрібно відвідати, k> = 1),
-// ls (список відстаней, всі відстані є додатними або нульовими цілими числами, і цей список містить принаймні один елемент). 
+// ls (список відстаней, всі відстані є додатними або нульовими цілими числами, і цей список містить принаймні один елемент).
 
-const chooseOptimalDistance2 = (d, k, ls) => {
-  if (ls.length < k) return null;
+// const chooseOptimalDistance2 = (d, k, ls) => {
+//   if (ls.length < k) return null;
 
-  const getMaxDist = (combs) => {
-    let maxDist = 0;
-    for (let comb of combs) {
-      const newDist = comb.reduce((sum, item) => sum + item, 0);
-      if (newDist > maxDist && newDist <= d) maxDist = newDist;
-    }
-    return maxDist > 0 ? maxDist : null;
-  };
+//   const getMaxDist = (combs) => {
+//     let maxDist = 0;
+//     for (let comb of combs) {
+//       const newDist = comb.reduce((sum, item) => sum + item, 0);
+//       if (newDist > maxDist && newDist <= d) maxDist = newDist;
+//     }
+//     return maxDist > 0 ? maxDist : null;
+//   };
 
-  if (ls.length === k) return getMaxDist([ls]);
+//   if (ls.length === k) return getMaxDist([ls]);
 
-  const combinations = [];
-  const getComb = (level, comb, rest) => {
-    for (let i = 0; i <= rest.length - level; i++) {
-      if (level <= 1) {
-        combinations.push([...comb, rest[i]]);
-      } else {
-        getComb(level - 1, [...comb, rest[i]], rest.slice(i + 1));
-      }
-    }
-  };
-  getComb(k, [], ls);
-  return getMaxDist(combinations);
-};
+//   const combinations = [];
+//   const getComb = (level, comb, rest) => {
+//     for (let i = 0; i <= rest.length - level; i++) {
+//       if (level <= 1) {
+//         combinations.push([...comb, rest[i]]);
+//       } else {
+//         getComb(level - 1, [...comb, rest[i]], rest.slice(i + 1));
+//       }
+//     }
+//   };
+//   getComb(k, [], ls);
+//   return getMaxDist(combinations);
+// };
 
-console.log(chooseOptimalDistance2(163, 3, [50, 51, 49])); // 150
+// console.log(chooseOptimalDistance2(163, 3, [50, 51, 49])); // 150
 
 // ____________________________________________________________________
 // *
@@ -203,5 +203,23 @@ console.log(chooseOptimalDistance2(163, 3, [50, 51, 49])); // 150
 //     if (x === 0) return 1;
 //     return x * factorial(x-1);
 // }
-// console.log(factorial(-1));
+// console.log(factorial(10));
 
+// ____________________________________________________________________
+// *
+
+// const form = document.querySelector(".form");
+
+// form.addEventListener("submit", handleSubmit);
+
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   const {elements: { login, password }} = event.currentTarget;
+
+//   if (login.value === "" || password.value === "") {
+//     return console.log("Please fill in all the fields!");
+//   }
+
+//   console.log(`Login: ${login.value}, Password: ${password.value}`);
+//   event.currentTarget.reset();
+// }
