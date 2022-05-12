@@ -7,21 +7,24 @@
     <title>Callback-функции</title>
     <style>
         body {
-  margin: 8px;
-  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.output {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: 700;
+.register-form {
+  display: flex;
+  flex-direction: column;
 }
 
-.color-palette {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-  gap: 4px;
+.register-form input {
+  margin-bottom: 16px;
+  padding: 8px 12px;
+}
+
+.register-form button {
+  padding: 12px;
 }
 
 .color-palette .item {
@@ -82,7 +85,11 @@
 <p class="output">Selected color: -</p>
 <div class="color-palette"></div>
 
-
+<form class="register-form" autocomplete="off">
+  <input type="text" name="username" placeholder="Username" />
+  <input type="password" name="password" placeholder="Password" />
+  <button type="submit">Register</button>
+</form>
     <script src="./js/01-vars.js" type="module"></script>
     <script src="./js/02-logoperator.js" type="module"></script>
     <script src="./js/03-tasksegment.js" type="module"></script>

@@ -233,46 +233,68 @@
 
 // button.addEventListener("click", handleClick);
 
-const colorPalette = document.querySelector(".color-palette");
-const output = document.querySelector(".output");
+// const colorPalette = document.querySelector(".color-palette");
+// const output = document.querySelector(".output");
 
-colorPalette.addEventListener("click", selectColor);
+// colorPalette.addEventListener("click", selectColor);
 
 // This is where delegation «magic» happens
-function selectColor(event) {
-  if (event.target.nodeName !== "BUTTON") {
-    return;
-  }
+// function selectColor(event) {
+//   if (event.target.nodeName !== "BUTTON") {
+//     return;
+//   }
 
-  const selectedColor = event.target.dataset.color;
-  console.log(event.target );
-  output.textContent = `Selected color: ${selectedColor}`;
-  output.style.color = selectedColor;
-}
+//   const selectedColor = event.target.dataset.color;
+//   console.log(event.target );
+//   output.textContent = `Selected color: ${selectedColor}`;
+//   output.style.color = selectedColor;
+// }
 
 // Some helper functions to render palette items
-createPaletteItems();
+// createPaletteItems();
 
-function createPaletteItems() {
-  const items = [];
-  for (let i = 0; i < 60; i++) {
-    const color = getRangomColor();
-    const item = document.createElement("button");
-    item.type = "button";
-    item.dataset.color = color;
-    item.style.backgroundColor = color;
-    item.classList.add("item");
-    items.push(item);
-  }
-  colorPalette.append(...items);
+// function createPaletteItems() {
+//   const items = [];
+//   for (let i = 0; i < 60; i++) {
+//     const color = getRangomColor();
+//     const item = document.createElement("button");
+//     item.type = "button";
+//     item.dataset.color = color;
+//     item.style.backgroundColor = color;
+//     item.classList.add("item");
+//     items.push(item);
+//   }
+//   colorPalette.append(...items);
+// }
+
+// function getRangomColor() {
+//   return `#${getRandomHex()}${getRandomHex()}${getRandomHex()}`;
+// }
+
+// function getRandomHex() {
+//   return Math.round(Math.random() * 256)
+//     .toString(16)
+//     .padStart(2, "0");
+// }
+
+// const form = document.querySelector(".register-form");
+
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   const {elements: { username, password }} = event.currentTarget;
+//   console.log(event.currentTarget.elements);
+// });
+
+const f = function() {
+  console.log(1);
 }
 
-function getRangomColor() {
-  return `#${getRandomHex()}${getRandomHex()}${getRandomHex()}`;
+const execute = function(f) {
+  setTimeout(f, 1000);
 }
+console.log(execute(f));
+ // что выведет в консоль и почему
 
-function getRandomHex() {
-  return Math.round(Math.random() * 256)
-    .toString(16)
-    .padStart(2, "0");
+f = function() {
+  console.log(2);
 }
