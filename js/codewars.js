@@ -223,12 +223,56 @@
 //   console.log(`Login: ${login.value}, Password: ${password.value}`);
 //   event.currentTarget.reset();
 // }
-const button = document.querySelector(".btn");
+// const button = document.querySelector(".btn");
 
-const handleClick = (event) => {
-  console.log("event: ", event);
-  console.log("event type: ", event.type);
-  console.log("currentTarget: ", event.currentTarget);
-};
+// const handleClick = (event) => {
+//   console.log("event: ", event);
+//   console.log("event type: ", event.type);
+//   console.log("currentTarget: ", event.currentTarget);
+// };
 
-button.addEventListener("click", handleClick);
+// button.addEventListener("click", handleClick);
+
+const colorPalette = document.querySelector(".color-palette");
+const output = document.querySelector(".output");
+
+colorPalette.addEventListener("click", selectColor);
+
+// This is where delegation «magic» happens
+function selectColor(event) {
+  if (event.target.nodeName !== "BUTTON") {
+    return;
+  }
+
+  const selectedColor = event.target.dataset.color;
+  console.log(event.target );
+  output.textContent = `Selected color: ${selectedColor}`;
+  output.style.color = selectedColor;
+}
+
+// Some helper functions to render palette items
+createPaletteItems();
+
+function createPaletteItems() {
+  const items = [];
+  for (let i = 0; i < 60; i++) {
+    const color = getRangomColor();
+    const item = document.createElement("button");
+    item.type = "button";
+    item.dataset.color = color;
+    item.style.backgroundColor = color;
+    item.classList.add("item");
+    items.push(item);
+  }
+  colorPalette.append(...items);
+}
+
+function getRangomColor() {
+  return `#${getRandomHex()}${getRandomHex()}${getRandomHex()}`;
+}
+
+function getRandomHex() {
+  return Math.round(Math.random() * 256)
+    .toString(16)
+    .padStart(2, "0");
+}
